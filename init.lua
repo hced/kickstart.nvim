@@ -91,12 +91,24 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true  -- default: false
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+
+-- hc [ -------------------------------------------------------------------------------------------
+
+-- Neovide configurations
+if vim.g.neovide then
+  vim.o.guifont = "Iosevka\\ Nerd\\ Font:h14"
+  --vim.o.guifont = "FiraMono\\ Nerd\\ Font:h14"
+end
+
+--vim.o.guifont = "FiraMono\\ Nerd\\ Font:h14"
+
+------------------------------------------------------------------------------------------- ] hc --
 
 -- Make line numbers default
 vim.o.number = true
